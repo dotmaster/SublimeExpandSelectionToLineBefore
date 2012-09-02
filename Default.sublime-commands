@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Expand Selection to Line Before",
+        "command": "expand_selection_to_line_before"
+    },
+    {
+        "caption": "Contract Selection to Line After",
+        "command": "contract_selection_to_line_after"
+    }
+]

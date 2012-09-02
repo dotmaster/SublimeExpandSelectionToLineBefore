@@ -1,0 +1,4 @@
+[
+{ "keys": ["alt+shift+up"], "command": "expand_selection_to_line_before" },
+{ "keys": ["alt+shift+down"], "command": "contract_selection_to_line_after" }
+]

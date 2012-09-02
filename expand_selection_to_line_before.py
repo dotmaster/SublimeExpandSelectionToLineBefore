@@ -10,12 +10,7 @@ class ExpandSelectionToLineBefore(sublime_plugin.TextCommand):
     """
 
     def find_previous(self, from_point, to_point):
-        """Walks backwards from a point, until it finds a region that matches
-        the given regex.
-
-        Attempts to find the longest match possible. So while "oobar:
-        function()" may be a match, this will continue walking backwards until
-        it can no longer match, since "foobar: function()" is preferred.
+        """Walks backwards to the beginning of the line or one line from a point.
 
         """
 
@@ -71,9 +66,7 @@ class ExpandSelectionToLineBefore(sublime_plugin.TextCommand):
 
 
 class ContractSelectionToLineAfter(sublime_plugin.TextCommand):
-    """Expands the current selection region by one line. On first call if the cursor is not at the beginning of the line, the current line will be selected.
-
-    Consecutive calls continue to expand the selection by another line.
+    """Walks forward to the next line.
 
     """
 
@@ -99,7 +92,7 @@ class ContractSelectionToLineAfter(sublime_plugin.TextCommand):
             return None
 
         if line_point == from_point:
-            #if we are at the beginning of the line the line has been selected already and we select theline before
+            #if we are at the beginning of the line the line has been selected already and we select theline after.
             start_point = self.view.text_point(line + 1, 0)
         else:
             start_point = line_point

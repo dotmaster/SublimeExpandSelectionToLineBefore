@@ -6,11 +6,11 @@
         [
 
             {
-                "caption": "Expand Selection to line Before",
+                "caption": "Expand Selection to line before",
                 "command": "expand_selection_to_line_before"
             },
             {
-                "caption": "Contract Selection to Line After",
+                "caption": "Contract Selection to line after",
                 "command": "contract_selection_to_line_after"
             }
         ]

@@ -3,7 +3,7 @@ import sublime
 
 
 class ExpandSelectionToLineBefore(sublime_plugin.TextCommand):
-    """Expands the current selection region by one line. On first call if the cursor is not at the beginning of the line, the current line will be selected.
+    """Expands the current selection region by one line before the selection. On first call if the cursor is not at the beginning of the line, the current line will be selected.
 
     Consecutive calls continue to expand the selection by another line.
 
